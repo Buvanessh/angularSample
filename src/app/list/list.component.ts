@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Employee } from '../employee';
 
 @Component({
   selector: 'app-list',
@@ -9,4 +10,7 @@ export class ListComponent {
 
   @Input()
   names:String[]=[];
+
+  @Input()
+  employees:Employee[]=[]
 }

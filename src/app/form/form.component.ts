@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Employee } from '../employee';
 
 @Component({
   selector: 'app-form',
@@ -17,4 +18,19 @@ export class FormComponent {
     this.name="";
     }
   }
+
+
+  employees:Employee[]=[]
+  name1:String;
+  age:number;
+  role:String;
+  emp:Employee;
+  save1()
+  {
+    this.emp=new Employee(this.name1,this.age,this.role);
+    this.employees.push(this.emp);
+    console.log(this.employees)
+  }
+  
+
 }
